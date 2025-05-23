@@ -52,7 +52,7 @@ sns.barplot(x= importances[indices], y= features[indices], palette='viridis')
 plt.ylabel('Feature')
 plt.show()
 
-####### B 작업자 작업 수행 #######
+####### B 작업자 작업 수행 ########
 
 ''' 코드 작성 바랍니다 '''
 from xgboost import XGBClassifier
