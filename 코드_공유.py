@@ -55,4 +55,16 @@ plt.show()
 ####### B 작업자 작업 수행 #######
 
 ''' 코드 작성 바랍니다 '''
+from xgboost import XGBClassifier
+from sklearn.model_selection import GridSearchCV
 
+param_grid = {
+    'max_depth': [3, 5, 7, 9, 15],
+    'learning_rate': [0.1, 0.01, 0.001],
+    'n_estimators': [50, 100, 200, 300]
+}
+
+clf = XGBClassifier(random_state=42)
+gridsearch = GridSearchCV(clf, param_grid, cv=5, scoring='accuracy', n_jobs=-1)
+gridsearch.fit(X_train, y_train)
+print(gridsearch.best_params_)
