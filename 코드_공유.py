@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 wine = load_wine()
 
-# feature로 사용할 데이터에서는 'target' 컬럼을 drop합니다.
+# feature로 사용할 데이터에서는 'target' 컬럼을 drop합니다. #
 # target은 'target' 컬럼만을 대상으로 합니다.
 # X, y 데이터를 test size는 0.2, random_state 값은 42로 하여 train 데이터와 test 데이터로 분할합니다.
 
